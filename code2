@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int type; 
+int bag;
+float tickprice;
+float taxprice;
+float baggage;
+int firstArray;
+int busiArray;
+int econArray;
+
+printf("Please enter the class you would like to sit in");
+scanf("%d", &type);
+
+while (type != -1) {
+switch (type) {
+case 1:
+printf("You have picked first class\n");
+
+tickprice = 325.00;
+
+printf("Please enter the amount of bags you will have with you");
+scanf("%d", &bag);
+if (bag > 1) {
+baggage = (bag * 5.75) + tickprice;
+}
+break;
+
+case 2:
+printf("You have picked business class\n");
+
+tickprice = 275.00;
+
+printf("Please enter the amount of bags you will have with you");
+scanf("%d", &bag);
+if (bag > 1) {
+baggage = (bag * 5.75) + tickprice;
+}
+break;
+
+case 3:
+printf("You have picked economy class\n");
+
+tickprice = 200.00;
+
+printf("Please enter the amount of bags you will have with you");
+scanf("%d", &bag);
+if (bag > 1) {
+baggage = (bag * 5.75) + tickprice;
+}
+
+break;
+} // end of switch
+
+printf("Would you like to purchase another ticket?");
+}// end of while
+
